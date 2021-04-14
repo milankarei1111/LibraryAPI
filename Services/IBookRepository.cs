@@ -11,6 +11,7 @@ namespace LibraryAPI.Services
         IEnumerable<BookDto> GetBooksForAuthor(Guid authorId);
         BookDto GetBookForAuthor(Guid authorId, Guid bookId);
         void AddBook(BookDto bookDto);
+        void DeleteBook(BookDto bookDto);
     }
 }
  
