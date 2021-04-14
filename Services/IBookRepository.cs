@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace LibraryAPI.Services
 {
-    interface IBookRepository
+    public interface IBookRepository
     {
         IEnumerable<BookDto> GetBooksForAuthor(Guid authorId);
         BookDto GetBookForAuthor(Guid authorId, Guid bookId);
     }
 }
+ 
