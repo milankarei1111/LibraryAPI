@@ -12,6 +12,7 @@ namespace LibraryAPI.Services
         BookDto GetBookForAuthor(Guid authorId, Guid bookId);
         void AddBook(BookDto bookDto);
         void DeleteBook(BookDto bookDto);
+        void UpdateBook(Guid authorId, Guid bookId,BookForUpdateDto bookForUpdateDto);
     }
 }
  

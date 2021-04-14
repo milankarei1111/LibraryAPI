@@ -90,5 +90,24 @@ namespace LibraryAPI.Controllers
             BookRepository.DeleteBook(book);
             return NoContent();
         }
+
+        [HttpPut("{bookId}")]
+        public IActionResult UpdateBook(Guid authorId, Guid bookId, BookForUpdateDto updateBook)
+        {
+            if (!AuthorRepository.IsAuthorExists(authorId))
+            {
+                return NotFound();
+            }
+
+            var book = BookRepository.GetBookForAuthor(authorId, bookId);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+            
+            BookRepository.UpdateBook(authorId, bookId, updateBook);
+            return NoContent();
+        }
     }
 }

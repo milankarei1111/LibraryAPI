@@ -28,5 +28,14 @@ namespace LibraryAPI.Services
         {
             LibraryMockData.Current.Books.Remove(bookDto);
         }
+
+        public void UpdateBook(Guid authorId, Guid bookId, BookForUpdateDto book)
+        {
+            var originalBook = GetBookForAuthor(authorId, bookId);
+
+            originalBook.Title = book.Title;
+            originalBook.Description = book.Description;
+            originalBook.Pages = book.Pages;
+        }
     }
 }
