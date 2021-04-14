@@ -14,7 +14,10 @@ namespace LibraryAPI.Controllers
     public class AuthorController : ControllerBase
     {
         public readonly IAuthorRepository AuthorRepository;
-        public AuthorController(IAuthorRepository authorRepository) => AuthorRepository = authorRepository;
+        public AuthorController(IAuthorRepository authorRepository)
+        {
+            AuthorRepository = authorRepository;
+        }
 
         [HttpGet]
         public ActionResult <List<AuthorDto>> GetAuthors()
@@ -22,7 +25,7 @@ namespace LibraryAPI.Controllers
             return AuthorRepository.GetAuthors().ToList();
         }
 
-        [HttpGet("{authorId}")]
+        [HttpGet("{authorId}", Name = nameof(GetAuthor))]
         public ActionResult<AuthorDto> GetAuthor(Guid authorId)
         {
             var author = AuthorRepository.GetAuthor(authorId);
@@ -34,6 +37,19 @@ namespace LibraryAPI.Controllers
             {
                 return author;
             }
+        }
+
+        [HttpPost]
+        public IActionResult CreateAuthor(AuthorForCreationDto authorForCreationDto)
+        {
+            var authorDto = new AuthorDto 
+            {
+                Name = authorForCreationDto.Name,
+                Age = authorForCreationDto.Age,
+                Email = authorForCreationDto.Email,
+            };
+            AuthorRepository.AddAuthor(authorDto);
+            return CreatedAtRoute(nameof(GetAuthor), new { authorId = authorDto.Id }, authorDto);
         }
     }
 }

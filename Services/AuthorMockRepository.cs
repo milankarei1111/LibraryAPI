@@ -24,5 +24,10 @@ namespace LibraryAPI.Services
         {
             return LibraryMockData.Current.Authors.Any(author => author.Id == authorId);
         }
+        public void AddAuthor(AuthorDto author)
+        {
+            author.Id = Guid.NewGuid();
+            LibraryMockData.Current.Authors.Add(author);
+        }
     }
 }
