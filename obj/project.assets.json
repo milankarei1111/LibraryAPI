@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\JOY-PC\\.nuget\\packages\\": {}
+    "C:\\Users\\wanru.tsai\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JOY-PC\\netCore3\\source\\repos\\LibraryAPI\\LibraryAPI.csproj",
+      "projectUniqueName": "D:\\104777\\LibraryAPI\\LibraryAPI.csproj",
       "projectName": "LibraryAPI",
-      "projectPath": "D:\\JOY-PC\\netCore3\\source\\repos\\LibraryAPI\\LibraryAPI.csproj",
-      "packagesPath": "C:\\Users\\JOY-PC\\.nuget\\packages\\",
-      "outputPath": "D:\\JOY-PC\\netCore3\\source\\repos\\LibraryAPI\\obj\\",
+      "projectPath": "D:\\104777\\LibraryAPI\\LibraryAPI.csproj",
+      "packagesPath": "C:\\Users\\wanru.tsai\\.nuget\\packages\\",
+      "outputPath": "D:\\104777\\LibraryAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JOY-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wanru.tsai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -32,6 +37,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -43,6 +49,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -61,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
